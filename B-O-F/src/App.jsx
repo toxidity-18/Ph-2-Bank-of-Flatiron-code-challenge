@@ -11,7 +11,7 @@ function App() {
   const [sortOrder, setSortOrder] = useState('asc');
 
   useEffect(() => {
-    axios.get('http://localhost:8001/transactions')
+    axios.get('https://bot-project-backend.vercel.app/transactions')
       .then(response => setTransactions(response.data))
       .catch(error => console.error('Error fetching data:', error));
   }, []);
